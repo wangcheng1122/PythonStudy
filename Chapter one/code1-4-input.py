@@ -1,11 +1,13 @@
+# 任务1
 name = input("请输入你的名字：")
 print(name)
-print(type(name))
 
+# 任务2
 age = input("请输入你的年龄：")
-print(age)
-print(type(age))
-
-age = int(input("请输入你的年龄："))
-print(age)
-print(type(age))
+# 类型转换
+age = int(age)
+# print(type(age))
+year = 2024
+# print(type(year))
+birth = year - age
+print("你的出生年份是", birth)
