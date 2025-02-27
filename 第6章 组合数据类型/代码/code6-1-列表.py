@@ -28,22 +28,23 @@ print([3, 2, 3, 4] < [2, 1])  # 意义不大，看看就好
 print(len(list3))  # 求元素个数
 print(max(list3))  # 求元素的最大值
 print(min(list3))  # 求元素的最小值
-
 # del list3   # 删除变量
 # print(list3)
+
 print('-' * 30)
 # 列表的遍历
+print(list2)
 for i in list2:
     print(i)
 
-for i, j in enumerate(list2):  # 枚举
+for i, j in enumerate(list2):  # 枚举（这里会把索引和值都返回）
     print(i, j)
 
-for i in range(len(list2)):
+for i in range(len(list2)): # 不常用
     print(i, list2[i])
 
 print('-' * 30)
-# 列表的常用方法method  变量.方法名()
+# 列表的常用方法  变量.方法名()
 # 添加元素
 list3.append('666')
 print(list3)
