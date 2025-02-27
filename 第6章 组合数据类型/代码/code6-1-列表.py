@@ -4,9 +4,9 @@ print(list1)
 print(type(list1))
 list2 = [1, 2, 3, True, False, 'hello']
 print(list2)
-list3 = list() # 类型转换：把参数转换为列表
+list3 = list() # 当调用 list() 函数且不传入任何参数时，它会创建一个空的列表对象
 print(list3)
-list3 = list('12345678') # 类型转换：str-->list
+list3 = list('12345678') # 当调用 list() 传入参数时，会发生类型转换：str-->list
 print(list3)
 
 # 列表的索引
