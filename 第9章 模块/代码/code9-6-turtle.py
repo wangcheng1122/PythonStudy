@@ -1,5 +1,5 @@
 import turtle,time
-from  my_package import my_tools
+from my_package import my_tools
 pen = turtle.Turtle()
 pen.backward(100)
 pen.speed(0)

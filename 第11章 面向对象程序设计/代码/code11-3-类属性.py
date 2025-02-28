@@ -1,5 +1,5 @@
 class Player(object):
-    numbers = 0   # 类属性
+    numbers = 0   # 类属性（用于统计或者共享的属性）
     def __init__(self,name,age,city):  # 初始化函数（构造函数）
         self.name = name  # 实例属性
         self.age = age

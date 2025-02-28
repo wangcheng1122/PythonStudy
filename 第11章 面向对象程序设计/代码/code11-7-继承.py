@@ -1,8 +1,9 @@
 # 面向对象特点：继承、多态、封装
-class Player(object): # 父类
-    numbers = 0   # 类属性
+class Player(object):  # 父类
+    numbers = 0  # 类属性
     levels = ['青铜', '白银', '黄金', '钻石', '王者']
-    def __init__(self,name,age,city,level):  # 初始化函数（构造函数）
+
+    def __init__(self, name, age, city, level):  # 初始化函数（构造函数）
         self.name = name  # 实例属性
         self.age = age
         self.city = city
@@ -13,14 +14,15 @@ class Player(object): # 父类
         Player.numbers += 1
 
     def show(self):  # 实例的方法
-        print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s' % (Player.numbers,self.name,self.city,self.level))
+        print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s' % (
+        Player.numbers, self.name, self.city, self.level))
 
     def level_up(self):
         index1 = Player.levels.index(self.level)
-        if index1<len(Player.levels)-1:
-            self.level = Player.levels[index1+1]
+        if index1 < len(Player.levels) - 1:
+            self.level = Player.levels[index1 + 1]
 
-    def get_weapon(self,weapon):
+    def get_weapon(self, weapon):
         self.weapon = weapon
 
     def show_weapon(self):
@@ -28,29 +30,29 @@ class Player(object): # 父类
 
     @classmethod
     def get_players(cls):  # 类方法
-        print('荣耀王者的用户数量已经达到了%d人'%cls.numbers)
+        print('荣耀王者的用户数量已经达到了%d人' % cls.numbers)
 
     @staticmethod
     def isvalid(**kwargs):
-        if kwargs['age']>18:
+        if kwargs['age'] > 18:
             return True
         else:
             return False
 
-class VIP(Player): # 子类
+
+class VIP(Player):  # 子类
 
     # 构造函数重写
-    def __init__(self,name,age,city,level,coin):
+    def __init__(self, name, age, city, level, coin):
         # 调用父类的构造函数
-        super().__init__(name,age,city,level)
+        super().__init__(name, age, city, level) # 调用父类的构造方法，主要是为了确保父类的属性和初始化逻辑能够正确执行，并且让子类能够继承父类的这些属性。
         self.coin = coin
 
     # 实例方法重写
     def show(self):  # 实例的方法
-        print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s，我的余额是%d' % (Player.numbers,self.name,self.city,self.level,self.coin))
+        print('我是荣耀王者的第%d个玩家，我的名字是%s，我来自 %s，我的段位是%s，我的余额是%d' % (
+        Player.numbers, self.name, self.city, self.level, self.coin))
 
 
-
-
-mia = VIP('mia',24,'哈尔滨','黄金',100)
+mia = VIP('mia', 24, '哈尔滨', '黄金', 100)
 mia.show()
