@@ -1,7 +1,9 @@
 author = 'mia'
 
-def add(a,b):
-    return a+b
+
+def add(a, b):
+    return a + b
+
 
 def total(*args):
     '''
@@ -10,6 +12,5 @@ def total(*args):
     '''
     result = 0
     for i in args:
-        result = result + i**2
+        result = result + i ** 2
     return result
-

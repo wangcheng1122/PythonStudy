@@ -18,7 +18,7 @@ def random_info(n=100):
             lista.append([name,subject,score])
 
 def average():
-    with open('data.csv',mode='r',encoding='utf-8') as f:
+    with open('data.csv', mode='r', encoding='utf-8') as f:
         cf = csv.reader(f)
         head = next(cf)  #获取表头
         scores = []
@@ -28,7 +28,7 @@ def average():
 
 
 def make_datas():
-    with open('data.csv',mode='a',encoding='utf-8') as f:
+    with open('data.csv', mode='a', encoding='utf-8') as f:
         cf = csv.writer(f)
         random_info()
         cf.writerows(lista)
